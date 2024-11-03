@@ -79,10 +79,10 @@ const ProtectedPage = () => {
             <form onSubmit={handleForm}>
                 <h2 className="my-3">Add Todo</h2>
 
-                <label>Todo Subject</label>
-                <input value={todoSubject} onChange={(e) => setTodoSubject(e.target.value)}/>
-                <label>Todo Description</label>
-                <input value={todoDescription} onChange={(e) => setTodoDescription(e.target.value)}/>
+                <label>Todo Subject</label><br/>
+                <input value={todoSubject} onChange={(e) => setTodoSubject(e.target.value)}/><br/>
+                <label>Todo Description</label><br/>
+                <input value={todoDescription} onChange={(e) => setTodoDescription(e.target.value)}/><br/><br/>
                 <button className="btn btn-primary my-3">Add Todo</button>
             </form>
             <button className="btn btn-info my-3" onClick={handleGetTodos}>Get Todos</button>
