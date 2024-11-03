@@ -22,10 +22,10 @@ const Register = () =>{
         <>
         <h1 className="my-3">Register</h1>
         <form onSubmit={handleForm}>
-        <label className="mt-2">User Name: </label>
-        <input className="form-control" type="text" value={username} onChange={(e) => setUsername(e.target.value)}/>
-        <label className="mt-2">Password: </label>
-        <input className="form-control" type="password" value={password} onChange={(e) => setPassword(e.target.value)}/><br/>
+        <label className="mt-2">User Name: </label><br />
+        <input  type="text" value={username} onChange={(e) => setUsername(e.target.value)}/><br />
+        <label className="mt-2">Password: </label><br />
+        <input  type="password" value={password} onChange={(e) => setPassword(e.target.value)}/><br/><br />
         <button className="btn btn-primary">Login</button>
         </form>
         </>

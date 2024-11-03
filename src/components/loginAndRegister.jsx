@@ -33,9 +33,9 @@ const LoginAndRegister = () => {
         <h1 className="my-3">{mode === "login" ? "Login" : "Register"} to Access Todo App</h1>
         <form className="my-3" onSubmit={handleForm}>
         <label>User Name: </label><br />
-        <input className="form-control" type="text" value={username} onChange={(e) => setUsername(e.target.value)}/><br />
-        <label for="inputPassword6" className="col-form-label">Password: </label><br />
-        <input className="form-control" id="inputPassword6"  type="password" value={password} onChange={(e) => setPassword(e.target.value)}/><br /><br />
+        <input  type="text" value={username} onChange={(e) => setUsername(e.target.value)}/><br />
+        <label htmlFor="inputPassword6">Password: </label><br />
+        <input  id="inputPassword6"  type="password" value={password} onChange={(e) => setPassword(e.target.value)}/><br /><br />
         <button className="btn btn-primary">Login</button><br />
         </form>
         <Link className="my-3" to="/register">New User? Click here to Register</Link>
