@@ -6,26 +6,26 @@ const initialState = {
 
 export const loginUser = createAsyncThunk('loginUser', async({user}) => {
     console.log("inside asyncthunk  ")
-    const response = await axios.post("https://backend-todo-app-tan.vercel.app//auth/login", user, { withCredentials: true })
+    const response = await axios.post("https://backend-todo-app-tan.vercel.app/auth/login", user, { withCredentials: true })
     console.log("after post call")
     console.log(response.data)
     return response.data
 })
 
 export const accessProtectedRoute = createAsyncThunk('accessPR', async() => {
-    const response = await axios.get("https://backend-todo-app-tan.vercel.app//private/user/login", {withCredentials: true})
+    const response = await axios.get("https://backend-todo-app-tan.vercel.app/private/user/login", {withCredentials: true})
     console.log(response.data)
     return response.data;
 })
 
 export const register = createAsyncThunk('register', async({newUser}) => {
-    const response = await axios.post("https://backend-todo-app-tan.vercel.app//auth/register", newUser);
+    const response = await axios.post("https://backend-todo-app-tan.vercel.app/auth/register", newUser);
     console.log(response.data)
     return response.data
 })
 
 export const logout = createAsyncThunk('logout', async() => {
-    const response = await axios.get("https://backend-todo-app-tan.vercel.app//auth/logout", {withCredentials: true}) 
+    const response = await axios.get("https://backend-todo-app-tan.vercel.app/auth/logout", {withCredentials: true}) 
     return response.data
 })
 const authSlice = createSlice({

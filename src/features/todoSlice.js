@@ -7,20 +7,20 @@ const initialState = {
     error: null
 }
 export const addTodo = createAsyncThunk('adding todo data', async({newTodo}) => {
-    const response = await axios.post('https://backend-todo-app-tan.vercel.app//todos/addTodo', newTodo, {withCredentials: true});
+    const response = await axios.post('https://backend-todo-app-tan.vercel.app/todos/addTodo', newTodo, {withCredentials: true});
     return response.data
 })
 
 export const getTodos = createAsyncThunk('allTodos', async() => {
-    const response = await axios.get("https://backend-todo-app-tan.vercel.app//todos/getTodos", {withCredentials: true});
+    const response = await axios.get("https://backend-todo-app-tan.vercel.app/todos/getTodos", {withCredentials: true});
     return response.data
 })
 export const deleteTodo = createAsyncThunk('deleteTodo', async({id}) => {
-    const response = await axios.delete(`https://backend-todo-app-tan.vercel.app//todos/deleteTodo/${id}`, {withCredentials: true})
+    const response = await axios.delete(`https://backend-todo-app-tan.vercel.app/todos/deleteTodo/${id}`, {withCredentials: true})
     return response.data
 })
 export const updateStatus = createAsyncThunk("updateStatus", async({completed, id}) => {
-    const response = await axios.put(`https://backend-todo-app-tan.vercel.app//todos/updateStatus/${id}`, {completed: completed}, {withCredentials: true})
+    const response = await axios.put(`https://backend-todo-app-tan.vercel.app/todos/updateStatus/${id}`, {completed: completed}, {withCredentials: true})
     return response.data
 })
 const todoSlice = createSlice({
