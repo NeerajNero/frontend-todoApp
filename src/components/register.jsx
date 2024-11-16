@@ -13,7 +13,7 @@ const Register = () =>{
             password: password
         }
         dispatch(register({newUser})).unwrap().then(() => {
-            toast.success("Registeration successful")
+            toast.success("Registration successful")
         }).catch((error) => {
             toast.error("user already exists")
         })
@@ -26,7 +26,7 @@ const Register = () =>{
         <input  type="text" value={username} onChange={(e) => setUsername(e.target.value)}/><br />
         <label className="mt-2">Password: </label><br />
         <input  type="password" value={password} onChange={(e) => setPassword(e.target.value)}/><br/><br />
-        <button className="btn btn-primary">Login</button>
+        <button className="btn btn-primary">Register</button>
         </form>
         </>
     )
